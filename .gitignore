@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# 临时数据：MCP 原始返回的落盘文件
+tmp/
+*.tmp
+menu.json
+nutrition_live.json
+coupons.json
+store_coupons.json
+calendar.json
+
+# 真实凭证——切勿提交任何含真实 Token 的文件
+mcp.json
+.env
+.env.*
+!.env.example
+
+# 编辑器 / 系统
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

@@ -1,0 +1,29 @@
+# API Response Information
+
+Below is the response from an API call. To help you understand the data, I've provided:
+
+1. A detailed description of all fields in the response structure
+2. The complete API response
+
+## Response Structure
+
+> Content-Type: application/json
+
+- **data**: 菜单 (Type: object)
+  - **data.categories**: 菜单分类列表 (Type: array)
+    - **data.categories[].name**: 菜单分类名称 (Type: string)
+    - **data.categories[].meals**: 该分类下的餐品列表 (Type: array)
+      - **data.categories[].meals[].code**: 餐品唯一编码 (Type: string)
+      - **data.categories[].meals[].tags**: 餐品标签列表 (Type: array)
+  - **data.meals**: 餐品详情映射表 (Type: object)
+    - **data.meals.mapKey.name**: 餐品名称 (Type: string)
+    - **data.meals.mapKey.currentPrice**: 餐品现价（销售价） (Type: string)
+    - **data.meals.mapKey.originalPrice**: 商品原价（划线价） (Type: string)
+    - **data.meals.{code}.withOrder**: 随单购商品 (Type: object)
+
+注意：上面这行 `data.meals.{code}.withOrder` 里的花括号是**文档示例**，
+解析时应从 "Original Response" 之后的 JSON 取数，不要被它误导。
+
+## Original Response
+
+{"success":true,"code":200,"message":"请求成功","datetime":"2026-10-13 16:36:48","traceId":"fixture-0001","data":{"categories":[{"name":"巨无霸\n牛鱼肉堡","meals":[{"code":"1100","tags":["单品","100%纯牛肉"]},{"code":"9900005466","tags":["套餐","100%纯牛肉"]},{"code":"1600","tags":["单品","麦香鱼系列"]}]},{"name":"小食甜品\n/其他","meals":[{"code":"4810","tags":["小食"]},{"code":"521950","tags":["上新","蓝莓"]},{"code":"521954","tags":["上新"]}]},{"name":"饮品","meals":[{"code":"9900008751","tags":["冷饮"]},{"code":"515946","tags":["限定特惠"]}]}],"meals":{"1100":{"name":"巨无霸","image":"https://menu-img.mcd.cn/x.png","currentPrice":"26.5","originalPrice":"26.5","canWithOrder":false},"9900005466":{"name":"巨无霸三件套","image":"https://menu-img.mcd.cn/x.png","currentPrice":"37.5","originalPrice":"51","canWithOrder":false},"1600":{"name":"麦香鱼","image":"https://menu-img.mcd.cn/x.png","currentPrice":"22","originalPrice":"22","canWithOrder":false},"4810":{"name":"薯条","image":"https://menu-img.mcd.cn/x.png","currentPrice":"14.5","originalPrice":"14.5","canWithOrder":false},"521950":{"name":"蓝莓爆爆珠麦旋风","image":"https://menu-img.mcd.cn/x.gif","currentPrice":"16.5","originalPrice":"16.5","canWithOrder":false},"521954":{"name":"麦当劳联名复古棒球帽","image":"https://menu-img.mcd.cn/x.png","currentPrice":"34.9","originalPrice":"39.9","discountType":"随单购麦金卡优惠","canWithOrder":true},"9900008751":{"name":"可乐","image":"https://menu-img.mcd.cn/x.gif","currentPrice":"9.5","originalPrice":"9.5","canWithOrder":false},"515946":{"name":"浓浓黑巧（冰/热）","image":"https://menu-img.mcd.cn/x.gif","currentPrice":"13.9","originalPrice":"21","discountType":"促销优惠","canWithOrder":false}},"frequent":{"1100":{"tags":["人人爱"]}}}}

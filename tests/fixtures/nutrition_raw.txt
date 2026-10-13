@@ -1,0 +1,16 @@
+# API Response Information
+
+Below is the response from an API call. To help you understand the data, I've provided:
+
+1. A detailed description of all fields in the response structure
+2. The complete API response
+
+## Response Structure
+
+- **code**: 错误码 (Type: number)
+- **data**: 餐品热量列表(Type: string)
+- **message**: 错误信息 (Type: string)
+
+## Original Response
+
+{"success":true,"code":200,"message":"请求成功","datetime":"2026-10-13 16:36:59","traceId":"fixture-nutrition","data":"[9]{productName,nutritionDescription,energyKj,energyKcal,protein,fat,carbohydrate,sodium,calcium}:\n  巨无霸,null,2146,513,27,26,42,961,171\n  中薯条,null,1210,289,4,12,38,165,18\n  大薯条,null,1587,379,6,16,50,216,23\n  可乐中杯,null,616,147,0,0,36,0,10\n  奥利奥麦旋风,null,1115,266,5,9,40,116,185\n  麦香鱼,null,1359,325,16,13,35,556,99\n  麦辣鸡腿汉堡,null,2029,485,24,24,42,1208,154\n  纯牛奶（盒装）,null,541,129,7,7,10,73,231\n  纯牛奶（盒装）,null,541,129,7,7,10,73,231"}
